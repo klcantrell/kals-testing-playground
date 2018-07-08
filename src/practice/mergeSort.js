@@ -3,7 +3,7 @@
  * @param {array} right - right half of original input array
  * @returns {array}
  */
-const merge = (left, right) => {
+const mergeMethod = (left, right) => {
   let mergedArray = [];
   while(left.length && right.length) {
     if (left[0] < right[0]) {
@@ -28,7 +28,7 @@ const mergeSortBasic = arr => {
   const left = arr.slice(0, middle);
   const right = arr.slice(middle);
 
-  return merge(mergeSortBasic(left), mergeSortBasic(right));
+  return mergeMethod(mergeSortBasic(left), mergeSortBasic(right));
 };
 
 export default mergeSortBasic;
